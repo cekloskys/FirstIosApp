@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  FirstIosApp
-//  Manages the single screen in the app
+//  Manages the single scene in the app
 //
 //  Created by Sue Ceklosky on 10/21/19.
 //  Copyright © 2019 susie. All rights reserved.
@@ -13,49 +13,95 @@ import UIKit
 // Subclass of UIViewController
 class ViewController: UIViewController {
 
-    // Gave ViewController access to the
+    // Gives ViewController access to the
     // ImageView
     @IBOutlet weak var monsterImageView: UIImageView!
     
-    // Created an array of String for the
+    // Create an array of String for the
     // names of the different monster images
     var monsters = ["Astro", "Fluffy", "Munchie", "Squido"]
+    
+    // IBOutlets are created as Optionals
+    // This means that they may contain a value
+    // or they may contain nil
+    @IBOutlet weak var amountTextField: UITextField!
+    
+    @IBOutlet weak var tipPercentTextField: UITextField!
+    
+    @IBOutlet weak var tipLabel: UILabel!
     
     // Called when scene is accessed
     // Since this is the launcher scene,
     // that means it will be called when
-    // the app launchess
+    // the app launches
     // Include initialization work here
     // Like onCreate method in Android
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Created an instance of a Joke
+        // Creat an instance of a Joke
         let joke = Jokes()
         
-        // Iterated through jokes array
+        // Iterate through jokes array
         for joke in joke.jokes {
-            // Printed out jokes to debug area
+            // Print out jokes to debug area
             print(joke)
         }
         
     }
 
-    // Gave ViewController ability to respond
-    // the selection of segments in the Segmented
-    // Control
+    // Gives ViewController ability to respond
+    // to the selection of segments in the
+    // Segmented Control
     @IBAction func changeMonster(_ sender: UISegmentedControl) {
         
-        // Changed image based on the segement
+        // Change image based on the segement
         // selected
         
-        // Index contained of segement selected (0, 1, 2, 3)
+        // Get index of segement selected (0, 1, 2, 3)
         let index = sender.selectedSegmentIndex
         
-        // Set the image in image view to a new UIImage
-        // The new image is whatever element in the monsters
-        // array that matches up with the index
+        // Set the image in Image View to a new UIImage
+        // The new UIImage is the element in the monsters
+        // array that matches the index
         // (0 - Astro, 1 - Fluffy, 2 - Munchie, 3 - Squido
         monsterImageView.image = UIImage(named: monsters[index])
+    }
+    
+    
+    @IBAction func calculateTip(_ sender: UIButton) {
+        
+        var tip = 0.0
+        var dAmount = 0.0
+        var dPercent = 0.0
+        
+        // Get the values input in the Text Fields and
+        // assign them to constants
+        // Use optional binding to find out if the Text
+        // Fields contain a value or nil
+        if let amount = amountTextField.text, let percent = tipPercentTextField.text {
+            
+            // Trim whitespace from constants
+            let trimmedAmount = amount.trimmingCharacters(in: .whitespaces)
+            let trimmedPercent = percent.trimmingCharacters(in: .whitespaces)
+            
+            // Check to make sure the trimmed constants aren't empty
+            if (!trimmedAmount.isEmpty && !trimmedPercent.isEmpty) {
+                
+                // Convert trimmed constants to Doubles
+                dAmount = Double(trimmedAmount)!
+                dPercent = Double(trimmedPercent)!
+                
+                // Calculate tip
+                tip = dAmount * dPercent
+            }
+            
+        }
+        
+        // Convert calculated tip to a String
+        // Use interpolation to embed the
+        // calculated String tip in another String
+        // Display String in Label
+        tipLabel.text = "Tip is $\(String(tip))"
     }
 }

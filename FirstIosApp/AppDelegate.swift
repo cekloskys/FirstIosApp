@@ -1,6 +1,7 @@
 //
 //  AppDelegate.swift
 //  FirstIosApp
+//  Contains methods that respond to application events
 //
 //  Created by Sue Ceklosky on 10/21/19.
 //  Copyright © 2019 susie. All rights reserved.

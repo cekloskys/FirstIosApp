@@ -8,22 +8,21 @@
 
 import Foundation
 
-// Created
+// Create Jokes class
 class Jokes {
     
-    // Created a property that is an array of Strings
-    // Used var to tell Swift that they array is going
+    // Create a property that is an array of Strings
+    // Use var to tell Swift that they array is going
     // to be changed
-    // Would have used let if we wanted the array to be a
-    // constant
+    // Would have used let if we wanted the array to
+    // be a constant
     var jokes = [String] ()
     
-    // Created init method
+    // Create init method
     // Is equivalent of Java constructor
     init () {
-        // Included two Strings in the arrays
+        // Include two Strings in the array
         jokes.append("What do you call a bear with no teeth? A gummy bear!")
-        jokes.append("If con is the opposite of pro, it must mean Congress is the opposite of Progress!s")
+        jokes.append("If con is the opposite of pro, it must mean Congress is the opposite of Progress!")
     }
-    
 }
