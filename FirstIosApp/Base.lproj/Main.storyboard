@@ -87,11 +87,42 @@
                         <outlet property="monsterImageView" destination="3u2-dK-8kq" id="zZ8-ld-kiS"/>
                         <outlet property="tipLabel" destination="ZSo-pq-YFF" id="5pm-z2-2e8"/>
                         <outlet property="tipPercentTextField" destination="hmW-vR-FPh" id="xtN-Hk-a6E"/>
+                        <segue destination="wZY-CH-LoQ" kind="presentation" identifier="GoToNewView" id="HcZ-VK-Vu0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="92.203898050974516"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="so1-fQ-zAo">
+            <objects>
+                <viewController id="wZY-CH-LoQ" customClass="NewViewController" customModule="FirstIosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bNo-PW-Xey"/>
+                        <viewControllerLayoutGuide type="bottom" id="a7R-vu-sY1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dQd-fe-XKR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-AV-HeE">
+                                <rect key="frame" x="51" y="289" width="274" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tipLabel" destination="7eI-AV-HeE" id="VJ6-Ii-yia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejD-Hy-yMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="91.304347826086968"/>
         </scene>
     </scenes>
     <resources>

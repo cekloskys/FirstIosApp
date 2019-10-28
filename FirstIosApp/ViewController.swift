@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipLabel: UILabel!
     
+    // Create a String that will store the calculated tip
+    var calculatedTip = ""
+    
     // Called when scene is accessed
     // Since this is the launcher scene,
     // that means it will be called when
@@ -68,7 +71,8 @@ class ViewController: UIViewController {
         monsterImageView.image = UIImage(named: monsters[index])
     }
     
-    
+    // Give ViewController ability to respond to
+    // the Button being pushed
     @IBAction func calculateTip(_ sender: UIButton) {
         
         var tip = 0.0
@@ -103,5 +107,31 @@ class ViewController: UIViewController {
         // calculated String tip in another String
         // Display String in Label
         tipLabel.text = "Tip is $\(String(tip))"
+        
+        // Store calculated tip in String
+        calculatedTip = "Tip is $\(String(tip))"
+        
+        // Seque to New View Controller Scene
+        // This method requires the prepare method
+        // be overridden
+        performSegue(withIdentifier: "GoToNewView", sender: nil)
+    }
+    
+    // This method creates an instance of the View Controller
+    // that is being segued to and it passes the View
+    // Controller the calculated tip
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // If we're segueing to the View Controller that
+        // has the identifier GoToNewView
+        if segue.identifier == "GoToNewView" {
+            
+            // Create an instance of that View Controller
+            let newViewController = segue.destination as? NewViewController
+            
+            // Set its tip to show property equal to
+            // calculated tip
+            newViewController?.tipToShow = calculatedTip
+        }
     }
 }
