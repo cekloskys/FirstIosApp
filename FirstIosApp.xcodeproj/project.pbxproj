@@ -19,6 +19,7 @@
 		9CC645AF235DEAD100101767 /* Squido.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CC645AB235DEAD100101767 /* Squido.png */; };
 		9CC645B0235DEAD100101767 /* Munchie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CC645AC235DEAD100101767 /* Munchie.png */; };
 		9CEEBB1223672C2700C83F79 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEBB1123672C2700C83F79 /* NewViewController.swift */; };
+		9CEEBB142367345A00C83F79 /* NewTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEBB132367345A00C83F79 /* NewTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9CC645AB235DEAD100101767 /* Squido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squido.png; sourceTree = "<group>"; };
 		9CC645AC235DEAD100101767 /* Munchie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Munchie.png; sourceTree = "<group>"; };
 		9CEEBB1123672C2700C83F79 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		9CEEBB132367345A00C83F79 /* NewTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				9CC645AC235DEAD100101767 /* Munchie.png */,
 				9CC645AB235DEAD100101767 /* Squido.png */,
 				9CEEBB1123672C2700C83F79 /* NewViewController.swift */,
+				9CEEBB132367345A00C83F79 /* NewTableTableViewController.swift */,
 			);
 			path = FirstIosApp;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC64598235DDC8600101767 /* ViewController.swift in Sources */,
+				9CEEBB142367345A00C83F79 /* NewTableTableViewController.swift in Sources */,
 				9CC64594235DDC8600101767 /* AppDelegate.swift in Sources */,
 				9CEEBB1223672C2700C83F79 /* NewViewController.swift in Sources */,
 				9CC645A8235DE32300101767 /* Jokes.swift in Sources */,
