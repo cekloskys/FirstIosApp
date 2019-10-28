@@ -59,7 +59,7 @@ class NewTableTableViewController: UITableViewController {
         // textLabel, imageView, detailTextLable are
         // properties of the cell
         // change the attributes of those properties
-        // the indexPath property (struct) that
+        // the indexPath parameter (struct) that
         // encapsulates the section of the cell and
         // the row of the cell 
         // (0, 0), (0, 1), (0, 2), (0, 3)
